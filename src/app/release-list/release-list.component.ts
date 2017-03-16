@@ -25,7 +25,13 @@ export class ReleaseListComponent implements OnInit {
     }
 
   ]
-  constructor() { }
+  constructor() { 
+    this.releases.sort((left, right)=> { 
+      if (left.customer > right.customer) return 1;
+      if (left.customer < right.customer) return -1;
+      return 0;
+    }); 
+  }
 
   ngOnInit() {
   }
