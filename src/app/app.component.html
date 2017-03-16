@@ -1,3 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
+<nav>
+  <div class="nav-wrapper">
+    <ul>
+      <li routerLinkActive="green-background">
+        <a [routerLink]="['/home']">Home</a></li>
+      <li routerLinkActive="green-background">
+        <a [routerLink]="['/detail']">Detail</a></li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
