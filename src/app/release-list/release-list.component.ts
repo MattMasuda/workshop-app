@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-release-list',
+  selector: 'fh-release-list',
   templateUrl: './release-list.component.html',
   styleUrls: ['./release-list.component.css']
 })

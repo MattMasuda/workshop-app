@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-release-filter',
+  selector: 'fh-release-filter',
   templateUrl: './release-filter.component.html',
   styleUrls: ['./release-filter.component.css']
 })
