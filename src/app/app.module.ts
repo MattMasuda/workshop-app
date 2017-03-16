@@ -8,6 +8,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 
+import { ReleaseItemComponent } from './release-item/release-item.component';
+import { ReleaseListComponent } from './release-list/release-list.component';
+import { ReleaseFilterComponent } from './release-filter/release-filter.component';
+import { ReleaseAddItemComponent } from './release-add-item/release-add-item.component';
+
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -18,7 +23,11 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    DetailComponent
+    DetailComponent,
+    ReleaseItemComponent,
+    ReleaseListComponent,
+    ReleaseFilterComponent,
+    ReleaseAddItemComponent
   ],
   imports: [
     BrowserModule,
