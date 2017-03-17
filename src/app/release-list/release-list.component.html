@@ -4,8 +4,7 @@
   </div>
     <table class="table">
       <tr *ngFor="let release of releases">
-        <td>{{ release.customer }}</td>
-        <td>{{ release.description }}</td>
+        <fh-release-item [item]="release"></fh-release-item>
       </tr>
     </table>
 </div>
