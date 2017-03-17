@@ -5,9 +5,11 @@
   <div class="panel-body">
     <pre>{{ filterCriteria | json }}</pre>    
     <table class="table table-striped" >
+      <tbody>
       <tr *ngFor="let release of releases">
         <fh-release-item [item]="release"></fh-release-item>
       </tr>
+      </tbody>
     </table>
     </div>
 </div>
