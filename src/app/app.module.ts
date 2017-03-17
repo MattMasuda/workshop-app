@@ -12,6 +12,7 @@ import { ReleaseItemComponent } from './release-item/release-item.component';
 import { ReleaseListComponent } from './release-list/release-list.component';
 import { ReleaseFilterComponent } from './release-filter/release-filter.component';
 import { ReleaseAddItemComponent } from './release-add-item/release-add-item.component';
+import { ReleaseDataManager } from './release-data-manager';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -35,7 +36,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
-  providers: [],
+  providers: [ReleaseDataManager],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
