@@ -1,9 +1,8 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <button class="btn" 
+        <button class="btn btn-default" 
             *ngFor="let customer of customers" 
-            (click)="setCustomerFilter(customer.name)" 
-            [class.button-selected]="customerFilter.name === customer.name">
+            (click)="setCustomerFilter(customer.name)" >
             {{customer.name}}
         </button>
     </div>
