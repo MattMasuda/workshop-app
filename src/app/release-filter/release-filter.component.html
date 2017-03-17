@@ -1,3 +1,11 @@
-<p>
-  release-filter works!
-</p>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <button class="btn" 
+            *ngFor="let customer of customers" 
+            (click)="setCustomerFilter(customer.name)" 
+            [class.button-selected]="customerFilter.name === customer.name">
+            {{customer.name}}
+        </button>
+    </div>
+</div>
+<pre>{{ customerFilter | json }}</pre>
