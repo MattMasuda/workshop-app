@@ -7,26 +7,23 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ReleaseListComponent implements OnInit {
 
-  @Input() releases : any[];
+  @Input() releases: any[];
   @Input() filterCriteria: any;
 
   count: number = 0;
 
-  constructor() { 
+  constructor() { }
 
-  }
+  ngOnInit() { }
 
-  ngOnInit() {}
-  
   ngOnChanges() {
     if (this.releases) {
-    this.releases.sort((left, right)=> { 
-      if (left.customer > right.customer) return 1;
-      if (left.customer < right.customer) return -1;
-      return 0;
-    });
-    this.count = this.releases.length; 
+      this.releases.sort((left, right) => {
+        if (left.customer > right.customer) return 1;
+        if (left.customer < right.customer) return -1;
+        return 0;
+      });
+      this.count = this.releases.length;
+    }
   }
-  }
-
 }
