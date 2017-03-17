@@ -1,4 +1,4 @@
-<button *ngFor="let customer of customers" 
+<button class="btn" *ngFor="let customer of customers" 
     (click)="setCustomerFilter(customer.name)"  
     [class.button-selected]="customerFilter.name === customer.name"
     >
