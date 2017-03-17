@@ -1,5 +1,5 @@
 <p>
   <fh-release-add-item></fh-release-add-item>
-  <fh-release-filter></fh-release-filter>
-  <fh-release-list></fh-release-list>
+  <fh-release-filter (filterUpdated)="onFilterUpdated($event)"></fh-release-filter>
+  <fh-release-list [releases]="releases" [filterCriteria]="filter" ></fh-release-list>
 </p>

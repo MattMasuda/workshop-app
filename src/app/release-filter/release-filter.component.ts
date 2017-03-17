@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'fh-release-filter',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./release-filter.component.css']
 })
 export class ReleaseFilterComponent implements OnInit {
+
+  @Output() filterUpdated = new EventEmitter();
 
   customerFilter: any = {};
 
@@ -22,6 +24,9 @@ export class ReleaseFilterComponent implements OnInit {
   }
 
   setCustomerFilter(customer : string): void {
-    this.customerFilter.name = customer;
+    let newObject = Object.assign({}, this.customerFilter);
+    newObject.name = customer;
+    this.customerFilter = newObject;
+    this.filterUpdated.emit(this.customerFilter);
   }
 }

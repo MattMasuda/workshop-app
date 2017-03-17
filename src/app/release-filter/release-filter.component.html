@@ -1,10 +1,12 @@
 <div class="panel panel-default">
     <div class="panel-body">
+        <div>
         <button class="btn btn-default" 
             *ngFor="let customer of customers" 
             (click)="setCustomerFilter(customer.name)" >
             {{customer.name}}
         </button>
+        </div>
+        <pre>{{ customerFilter | json }}</pre>
     </div>
 </div>
-<pre>{{ customerFilter | json }}</pre>
