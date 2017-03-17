@@ -1,7 +1,11 @@
-<h1>{{title}}</h1>
-<nav>
+<nav class="navbar navbar-default">
   <div>
-    <ul class="nav nav-tabs">
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        {{title}}
+      </div>
+    </div>
+    <ul class="nav navbar-nav">
       <li routerLinkActive="active">
         <a [routerLink]="['/home']">Home</a></li>
       <li routerLinkActive="active">
