@@ -2,9 +2,12 @@
   <div class="panel-heading">
     <h3 class="panel-title">Releases <span class="badge">{{ count }}</span></h3>
   </div>
-    <table class="table">
+  <div class="panel-body">
+    <pre>{{ filterCriteria | json }}</pre>    
+    <table class="table table-striped" >
       <tr *ngFor="let release of releases">
         <fh-release-item [item]="release"></fh-release-item>
       </tr>
     </table>
+    </div>
 </div>
