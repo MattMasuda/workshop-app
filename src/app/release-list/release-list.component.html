@@ -1,5 +1,11 @@
-<div *ngFor="let release of releases">
-  <p>{{ release.customer }}</p>
-  <p>{{ release.description }}<p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Releases <span class="badge">{{ count }}</span></h3>
+  </div>
+    <table class="table">
+      <tr *ngFor="let release of releases">
+        <td>{{ release.customer }}</td>
+        <td>{{ release.description }}</td>
+      </tr>
+    </table>
 </div>
-

@@ -23,14 +23,17 @@ export class ReleaseListComponent implements OnInit {
       "customer": "LKA",
       "description": "RAFT change"
     }
-
   ]
+
+  count: number = 0;
+
   constructor() { 
     this.releases.sort((left, right)=> { 
       if (left.customer > right.customer) return 1;
       if (left.customer < right.customer) return -1;
       return 0;
-    }); 
+    });
+    this.count = this.releases.length; 
   }
 
   ngOnInit() {
