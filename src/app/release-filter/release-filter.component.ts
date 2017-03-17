@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReleaseFilterComponent implements OnInit {
 
+  customerFilter: any = {};
+
+  customers: any[] = [ 
+    { name: 'FH' },
+    { name: 'Airops' },
+    { name: 'LKA' },
+    { name: 'CCI' }
+  ];
+  
   constructor() { }
 
   ngOnInit() {
   }
 
+  setCustomerFilter(customer : string): void {
+    this.customerFilter.name = customer;
+  }
 }
